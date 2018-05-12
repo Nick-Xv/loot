@@ -1,6 +1,9 @@
 import cytoscape from 'cytoscape';
 import edgehandles from 'cytoscape-edgehandles';
 import coseBilkent from 'cytoscape-cose-bilkent';
+import { PolymerElement, html } from '@polymer/polymer';
+import '@polymer/paper-input/paper-input.js';
+import '@polymer/paper-icon-button/paper-icon-button.js';
 
 function graphElements(groups) {
   const nodes = groups.map(group => ({
@@ -40,13 +43,13 @@ function onRemoveGraphElement(evt) {
   }
 }
 
-export default class LootGroupsEditor extends Polymer.Element {
+export default class LootGroupsEditor extends PolymerElement {
   static get is() {
     return 'loot-groups-editor';
   }
 
   static get template() {
-    return Polymer.html`
+    return html`
       <style>
         :host > div {
           display: flex;
