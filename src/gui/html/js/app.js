@@ -55,4 +55,4 @@ window.loot = window.loot || {};
 window.loot.showProgress = showProgress;
 window.loot.onQuit = onQuit;
 
-initialise(loot);
+window.addEventListener('load', () => initialise(window.loot));
