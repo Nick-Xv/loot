@@ -24,8 +24,7 @@ module.exports = {
   devtool: 'source-map',
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.join(paths.SRC, 'index.html'),
-      inject: 'head'
+      template: path.join(paths.SRC, 'index.html')
     }),
     new CopyWebpackPlugin(
       [
